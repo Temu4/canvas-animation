@@ -55,13 +55,17 @@ window.addEventListener('mousemove', function(event){
     mouse.y = event.y;
 } )
 
+
 //Resizing the window
-window.addEventListener('resize', function(){
+
+//--------------------------------------The code doesn't execute witout resizing the browser window---------------------------------------------------------                    
+/*window.addEventListener('resize', function(){
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     
-    init();
-})
+    init()
+} )*/
+//--------------------------------------This part of the code doesn't execute witout resizing the browser window---------------------------------------------------------
 
 //Description of thr Circle
 function Circle(x, y, dx, dy, radius){
@@ -101,8 +105,7 @@ function Circle(x, y, dx, dy, radius){
         } else if (this.radius > this.minRadius){
             this.radius -= 1;
         }
-        
-        
+  
             this.draw();
     }
 }
@@ -110,21 +113,27 @@ function Circle(x, y, dx, dy, radius){
 //Creating array of circles
 var circleArray = [];
 
-
+//--------------------------------------This part of the code doesn't execute witout resizing the browser window---------------------------------------------------------
+/*
 function init(){
-    circleArray = [];
+    circleArray = [];*/
+//--------------------------------------This part of the code doesn't execute witout resizing the browser window---------------------------------------------------------
     for (var i =0; i < 300; i++){
         var x = Math.random() * window.innerWidth + radius,
         y = Math.random() * window.innerHeight + radius,
         dx = (Math.random() - 0.5),
         dy = (Math.random() - 0.5),
-        radius = Math.random() * 3 + 1;
+        radius = Math.random() * 5 + 1;
         circleArray.push(new Circle(x, y, dx, dy, radius));
     }
+//--------------------------------------This part of the code doesn't execute witout resizing the browser window---------------------------------------------------------
+//}
+//--------------------------------------This part of the code doesn't execute witout resizing the browser window---------------------------------------------------------
+ 
 
-}
 
- //Animating of circles
+
+//Animating of circles
 function animate(){
     requestAnimationFrame(animate);
     c.clearRect(0, 0, window.innerWidth, window.innerHeight);
