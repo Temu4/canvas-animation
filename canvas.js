@@ -46,7 +46,7 @@ var mouse = {
     y: undefined
 };
 
-var maxRadius = 40,
+var maxRadius = 20,
     minRadius = 2;
 
 //Mouse following
@@ -75,7 +75,7 @@ function Circle(x, y, dx, dy, radius){
     this.dy = dy;
     this.radius = radius;
     this.minRadius = minRadius;
-    var colorOf = ['#08447F', '#5CAEFF', '#1088FF', '#2E577F', '#0D6DCC'];
+    var colorOf = ['yellow', '#FFFFF0', 'orange', '#7FFF00', '#FFFFFF'];
     this.color = colorOf[Math.floor(Math.random() * colorOf.length)];
     
     this.draw = function(){
@@ -118,7 +118,7 @@ var circleArray = [];
 function init(){
     circleArray = [];*/
 //--------------------------------------This part of the code doesn't execute witout resizing the browser window---------------------------------------------------------
-    for (var i =0; i < 300; i++){
+    for (var i =0; i < 1000; i++){
         var x = Math.random() * window.innerWidth + radius,
         y = Math.random() * window.innerHeight + radius,
         dx = (Math.random() - 0.5),
